@@ -46,7 +46,7 @@ func (h *UserHandler) GetUserById(w http.ResponseWriter, r *http.Request) {
 func (h *UserHandler) CreateUser(w http.ResponseWriter, r *http.Request) {
     var user model.User
     _ = json.NewDecoder(r.Body).Decode(&user)
-    createdUser := h.service.CreateUser(user)
+    createdUser := h.service.CreateUser(&user)
     w.Header().Set("Content-Type", "application/json")
     json.NewEncoder(w).Encode(createdUser)
 }
@@ -62,7 +62,7 @@ func (h *UserHandler) UpdateUserById(w http.ResponseWriter, r *http.Request) {
 
     var user model.User
     _ = json.NewDecoder(r.Body).Decode(&user)
-    updatedUser, found := h.service.UpdateUserById(id, user)
+    updatedUser, found := h.service.UpdateUserById(id, &user)
     if found {
         w.Header().Set("Content-Type", "application/json")
         json.NewEncoder(w).Encode(updatedUser)

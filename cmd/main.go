@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -29,5 +30,6 @@ func main() {
     router.HandleFunc("/users/{id}", hndlr.DeleteUser).Methods("DELETE")
 
     // Inicia o servidor
+    fmt.Println("server is on")
     http.ListenAndServe(":8000", router)
 }
