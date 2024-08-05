@@ -10,9 +10,10 @@ This guide provides instructions to set up and run a basic Go API.
 
 1. **Clone the repository**
 
-   ```sh
-   git clone https://github.com/joaorfp/GO-api.git
-   cd GO-api/
+```bash
+ $ git clone https://github.com/joaorfp/GO-api.git
+ $ cd GO-api/
+```
 
 2. **Initialize the Go module**
 
