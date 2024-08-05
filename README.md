@@ -30,20 +30,20 @@ This guide provides instructions to set up and run a basic Go API.
 
 1. **Create a User**
 ```bash
- $ curl -X POST -H "Content-Type: application/json" -d '{"username": "johndoe", "email": "johndoe@example.com"}' http://localhost:8080/users
+ $ curl -X POST -H "Content-Type: application/json" -d '{"username": "johndoe", "email": "johndoe@example.com"}' http://localhost:8000/users
  ```
 
 2. **Create a Bank Accont**
 ```bash
- $ curl -X POST -H "Content-Type: application/json" -d '{"balance": 1000.50, "invested_balance": 500.00, "user_id": 1}' http://localhost:8080/accounts
+ $ curl -X POST -H "Content-Type: application/json" -d '{"balance": 1000.50, "invested_balance": 500.00, "user_id": 1}' http://localhost:8000/bankAccounts
  ```
 
 3. **Get All Users**
 ```bash
- $ curl -X GET http://localhost:8080/users
+ $ curl -X GET http://localhost:8000/users
  ```
 
 4. **Get All Bank Accounts**
 ```bash
- $ curl -X GET http://localhost:8080/accounts
+ $ curl -X GET http://localhost:8000/bankAccounts
  ```
